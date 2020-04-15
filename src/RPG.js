@@ -2,8 +2,8 @@
 
 export class Game {
   constructor(character, currentPlayer, currentAction) {
-    this.character = peeWee, davidBowie, elVira;
-    // this.character = character;
+    // this.character = peeWee, davidBowie, elVira;
+    this.character = character;
     this.currentPlayer = [];
     this.currentAction = [];
     this.level= 0;
