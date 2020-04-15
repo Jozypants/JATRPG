@@ -22,10 +22,10 @@ _This application will....._
 
 |   Behavior Description        |  
 |-------------------------------|
-| 1. Create game constructor [] |
-| 2. Create class for "characters" [] | |
-| 3. Create constructor for "characterType" (fighting skill, quality, weapon) [] |
-| 4. Create prototypes for characterTypes  [] |
+| 1. Create game constructor [√]|
+| 2. Create class & constructors for "character" [√]|
+| 3. Create prototypes for characterTypes [] |
+| 4.  [] |
 | 5.  [] |
 | 6.  [] |
 | 7.  [] |
