@@ -41,14 +41,15 @@ export class Player {
   }
   
   rollDice() {
-    // let random = Math.floor(Math.random() * 6) + 1;
-    let random = 6
+    let random = Math.floor(Math.random() * 6) + 1;
+    // let random = 3
     if (random <= 3) {
       return this.currentPlayer.fightChoice();
     } else {
       this.currentPlayer.hp = this.currentPlayer.hp + 20;
-      this.currentPlayer.level = this.currentPlayer.level + 1;
+      this.currentPlayer.level = this.currentPlayer.level + 2;
     }
   }
+  
 };
 
