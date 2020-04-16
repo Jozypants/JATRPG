@@ -27,7 +27,7 @@ describe("Player", () => {
     playerOne.chooseCharacter("elVira");
     playerOne.fightChoice("weapon");
     expect(playerOne.currentPlayer.hp).toEqual(35);
-    expect(playerOne.fightChoice()).toBe("dagger");
+    expect(playerOne.fightChoice("weapon")).toBe("dagger");
   });
 });
 

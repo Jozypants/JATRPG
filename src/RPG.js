@@ -38,6 +38,7 @@ export class Player {
       this.currentPlayer.hp = this.currentPlayer.hp - 10;
       return this.currentPlayer.action;
     }
+    
   }
 
 };
