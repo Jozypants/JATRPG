@@ -21,7 +21,14 @@ describe("Player", () => {
     expect(playerOne.currentPlayer.hp).toEqual(55);
     expect(playerOne.discoverWeapon()).toBe("glitter");
   });
-  
+
+  test("allows character to chose between the options of using a weapon or using an action", () => {
+    let playerOne = new Player();
+    playerOne.chooseCharacter("elVira");
+    playerOne.fightChoice("weapon");
+    expect(playerOne.currentPlayer.hp).toEqual(35);
+    expect(playerOne.fightChoice()).toBe("dagger");
+  });
 });
 
 
