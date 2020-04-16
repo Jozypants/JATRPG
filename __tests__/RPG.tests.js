@@ -15,12 +15,12 @@ describe("Player", () => {
       expect(playerOne.currentPlayer.weapon).toEqual("bike");
     });
   test("allows character weapon to be discovered and adds 5 HP.", () => {
-      let playerOne = new Player();
-      playerOne.chooseCharacter("davidBowie");
-      playerOne.discoverWeapon();
-      expect(playerOne.currentPlayer.hp).toEqual(55);
-      expect(playerOne.discoverWeapon()).toHaveReturned("glitter");
-    })
+    let playerOne = new Player();
+    playerOne.chooseCharacter("davidBowie");
+    playerOne.discoverWeapon();
+    expect(playerOne.currentPlayer.hp).toEqual(55);
+    expect(playerOne.discoverWeapon()).toBe("glitter");
+  });
 });
 
 
