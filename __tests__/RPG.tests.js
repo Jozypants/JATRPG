@@ -49,14 +49,14 @@ describe("Player", () => {
     let num = playerOne.rollDice();
     expect(num).toBeLessThanOrEqual(6);
   });
-  test("test method to determine fate of player for a number <=4", () => {
+  test("test method to determine fate of player for a number >=4", () => {
     let playerOne = new Player();
     playerOne.chooseCharacter("elVira");
-    let passFate = playerOne.determineFate(4);
-    // expect(passFate).toBe(true);
-    expect(playerOne.currentPlayer.hp).toEqual(60);
-    expect(playerOne.currentPlayer.level).toEqual(1);
-
+    playerOne.currentRoll = 6;
+    let passFate = playerOne.determineFate();
+    expect(passFate).toEqual(true);
+    // expect(playerOne.currentPlayer.hp).toEqual(60);
+    // expect(playerOne.currentPlayer.level).toEqual(1);
   });
 });
 
