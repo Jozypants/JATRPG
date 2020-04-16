@@ -49,10 +49,10 @@ describe("Player", () => {
     let num = playerOne.rollDice();
     expect(num).toBeLessThanOrEqual(6);
   });
-  test("test method to determine fate of player for a number >=3", () => {
+  test("test method to determine fate of player for a number <=4", () => {
     let playerOne = new Player();
-    let passFate = playerOne.determineFate(3);
-    expect(passFate).toBe(false);
+    let passFate = playerOne.determineFate(4);
+    expect(passFate).toBe(true);
   });
 });
 
