@@ -22,14 +22,14 @@ _This application will....._
 
 |   Behavior Description        |  
 |-------------------------------|
-| 1. Create game constructor [√]|
-| 2. Create class & constructors for "character" [√]|
-| 3. Create prototypes for characterTypes [] |
-| 4.  [] |
-| 5.  [] |
-| 6.  [] |
-| 7.  [] |
-| 8. Allows character to win if they reach a certain level [] |
+| 1. Create class & constructors for "character" [√]|
+| 2. The program allows you to choose your player - write function. [√] |
+| 3. Allows player to enter & discover their "weapon" [] |
+| 4. Allows player to choose to use "weapon" or "action" [] |
+| 5. Allows player to roll dice to defeat enemy & gain points []
+| 6. Lets player "die" [] |
+| 7. Lets player "win" by reaching "level : 2" [] |
+
 
 
 Game Constructor: 

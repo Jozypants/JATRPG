@@ -1,29 +1,27 @@
-import { Game } from './../src/RPG.js';
-import { Character } from './../src/RPG.js';
 
-describe('Game', () => {
-  test('game constructor holds inputted values', () => {
-    let game = new Game("peeWee");
-    expect(game.character).toEqual("peeWee");
-    expect(game.currentPlayer).toEqual([]);
-    expect(game.currentAction).toEqual([]);
-    expect(game.level).toEqual(0);
-  })
-})
+import { Player } from './../src/RPG.js';
 
-describe("Character", () => {
-  test('character constructor holds separate values for character objects', () => {
-    let playerOne = new Character();
-    expect(playerOne.peeWee.weapon).toEqual("bike");
-    expect(playerOne.peeWee.action).toEqual("dance");
-    expect(playerOne.peeWee.level).toEqual(0);
-    let playerTwo = new Character();
-    expect(playerTwo.davidBowie.weapon).toEqual("glitter");
-    expect(playerTwo.davidBowie.action).toEqual("jump");
-    expect(playerTwo.davidBowie.level).toEqual(1);
-    let playerThree = new Character();
-    expect(playerThree.elVira.weapon).toEqual("dagger");
-    expect(playerThree.elVira.action).toEqual("spell");
-    expect(playerThree.elVira.level).toEqual(0);
+describe("Player", () => {
+  test('Player constructor holds separate values for character objects', () => {
+    let playerOne = new Player();
+    expect(playerOne.player.peeWee.weapon).toEqual("bike");
+    expect(playerOne.player.peeWee.action).toEqual("dance");
+    expect(playerOne.player.peeWee.hp).toEqual(30);
+    expect(playerOne.player.peeWee.level).toEqual(0);
   });
+    test("character choice method should hold character value.", () => {
+      let playerOne = new Player();
+      playerOne.chooseCharacter("peeWee");
+      expect(playerOne.currentPlayer.weapon).toEqual("bike");
+    });
+  test("allows character weapon to be discovered and adds 5 HP.", () => {
+      let playerOne = new Player();
+      playerOne.chooseCharacter("davidBowie");
+      playerOne.discoverWeapon();
+      expect(playerOne.currentPlayer.hp).toEqual(55);
+      expect(playerOne.discoverWeapon()).toHaveReturned("glitter");
+    })
 });
+
+
+

@@ -1,129 +1,94 @@
 // Business Logic
 export class Player {
-  constructor() {
-    // this.possibleCharacters = {
-    //  peeWee: { weapon: "bike", action: "dance", level: 0 }
-    // }
-    // this.currentCharacter;
-    this.peeWee = { weapon: "bike", action: "dance", level: 0 }
-    this.davidBowie = { weapon: "glitter", action: "jump", level: 1 }
-    this.elVira = { weapon: "dagger", action: "spell", level: 0 }
+  constructor(currentPlayer) {
+    this.player = {
+      peeWee: { weapon: "bike", action: "dance", hp: 30, level: 0 },
+      elVira: { weapon: "dagger", action: "spell", hp: 40,level: 0 },
+      davidBowie: { weapon: "glitter", action: "jump", hp: 50, level: 0 },
+    }
+    this.currentPlayer = currentPlayer;
   }
   // methods for each character  -->
-  chooseCharacter(choice, player) {
-    if (choice === "peeWee") {
-      this.character = player.peeWee;
-      alert("peewee");
-    } 
-    if (choice === "davidBowie") {
-      this.character = player.davidBowie;
+  chooseCharacter(choice) {
+    if (choice === " ") {
+      return this.currentPlayer = "Please choose a character";
+    } else if (choice === "peeWee") {
+      this.currentPlayer = this.player.peeWee;
+      // return "peeWee";
+    } else if (choice === "davidBowie") {
+      this.currentPlayer = this.player.davidBowie;
+      // return "davidBowie"
+    } else if (choice === "elVira") {
+      this.currentPlayer = this.player.elVira;
+      // return "elVira"
     }
-    if (choice === "elVira") {
-      this.character = player.elVira;
-    }
-  } 
-}
-
-export class Game  {
-  constructor(currentPlayer, currentAction) {
-    // this.character = peeWee, davidBowie, elVira;
-    // this.character = character;
-    this.currentPlayer = [];
-    this.currentAction = [];
-    this.level= 0;
+    return this.currentPlayer;
   }
-  // methods for game --> 
 
-}
+  discoverWeapon() {
+    this.currentPlayer.hp = this.currentPlayer.hp + 5;
+    return this.currentPlayer.weapon;
+  }
+};
 
-// let character = new Game,Character;
-
-// let playerOne = new Character();
-// let newGame = new Game();
-
-// let playerOne = new Character ()
-// playerOne.peeWee; 
-
-//     let peeWee =  { 
-//       name: "Pee Wee",
-//       weapon: "acid bowtie",
-//       fightingStyle: "trickster"
-//     }
-//     let davidBowie = {
-//       name: ""
-//     } 
-//   };
+// fightChoice(){
+//   if currentPlayer choice = weapon then -= 15 hp
+//   else if currentPlayer choice = action -= 15 hp
 // }
-//   this.elVira = 
-//   this.davidBowie = 0;
 
-  // chooseCharacter(choice) {
-  //   if(choice == peeWee) {
-  //     this.weapon = peeWeeWeapon;
+// rollDice() {
+//   let random = Math.floor(Math.random() * 6) + 1;
+//   if (random <= 3) {
+//     ;
+    
 
-  //   }
-  // }
-class Player {
-  constructor() {
-    // this.possibleCharacters = {
-    //  peeWee: { weapon: "bike", action: "dance", level: 0 }
-    // }
-    // this.currentCharacter;
-    this.peeWee = { weapon: "bike", action: "dance", level: 0 }
-    this.davidBowie = { weapon: "glitter", action: "jump", level: 1 }
-    this.elVira = { weapon: "dagger", action: "spell", level: 0 }
-  }
-  // methods for each character  -->
-  chooseCharacter(choice) {
-    if (choice === "peeWee") {
-      this.character = this.peeWee;
-    } 
-    if (choice === "davidBowie") {
-      this.character = this.davidBowie;
-    }
-    if (choice === "elVira") {
-      this.character = this.elVira;
-    }
-  } 
-}
-
-class Game  {
-  constructor(currentPlayer, currentAction) {
-    // this.character = peeWee, davidBowie, elVira;
+//   } else if (random >= 4) {
+//     this.
+//   }
+  
+// });
+// export class Game  {
+//   constructor() {
+    // his.character = peeWee, davidBowie, elVira;
     // this.character = character;
-    this.currentPlayer = [];
-    this.currentAction = [];
-    this.level= 0;
-  }
-}
+    // this.currentPlayer = [];
+    // this.currentAction = [];
+    // this.level= 0;
+  // }
+  // methods for game --> 
+// }
 
-class Player {
-  constructor() {
-    // this.possibleCharacters = {
-    //  peeWee: { weapon: "bike", action: "dance", level: 0 }
-    // }
-    // this.currentCharacter;
-    this.peeWee = { weapon: "bike", action: "dance", level: 0 }
-    this.davidBowie = { weapon: "glitter", action: "jump", level: 1 }
-    this.elVira = { weapon: "dagger", action: "spell", level: 0 }
-  }
-  // methods for each character  -->
-  chooseCharacter(choice) {
-    if (choice === "peeWee") {
-      this.character = this.peeWee;
-    } 
-    if (choice === "davidBowie") {
-      this.character = this.davidBowie;
-    }
-    if (choice === "elVira") {
-      this.character = this.elVira;
-    }
-  } 
-}
 
-playerOne = new Player()
-playerOne.chooseCharacter('davidBowie');
-playerOne.character
+// tomorrow morning: 
+// - test chooseCharacter method in RPG.tests.js
+// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
+    // this.currentAction = [];
+    // this.level= 0;
+  // }Player.prototype.rollDice = function () {
+ 
+  // methods for game --> 
+// }
+
+
+// tomorrow morning: 
+// - test chooseCharacter method in RPG.tests.js
+// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
+    // this.currentAction = [];
+    // this.level= 0;
+  // }
+  // methods for game --> 
+// }
+
+
+// tomorrow morning: 
+// - test chooseCharacter method in RPG.tests.js
+// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
+    // this.currentAction = [];
+    // this.level= 0;
+  // }
+  // methods for game --> 
+// }
+
 
 // tomorrow morning: 
 // - test chooseCharacter method in RPG.tests.js
