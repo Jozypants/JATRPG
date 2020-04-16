@@ -49,12 +49,12 @@ export class Player {
   
   determineFate() {
     if (this.currentRoll <= 3) {
-      return false
+      return false;
     } else if (this.currentRoll >= 4) {
       this.currentPlayer.hp = this.currentPlayer.hp + 20;
       this.currentPlayer.level = this.currentPlayer.level + 2;
-      return true
     }
+    return true;
   };
 };
 
