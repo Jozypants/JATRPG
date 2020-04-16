@@ -7,6 +7,7 @@ export class Player {
       davidBowie: { weapon: "glitter", action: "jump", hp: 50, level: 0 },
     }
     this.currentPlayer = currentPlayer;
+    this.currentRoll = 0;
   }
   // methods for each character  -->
   chooseCharacter(choice) {
@@ -28,7 +29,7 @@ export class Player {
   discoverWeapon() {
     this.currentPlayer.hp = this.currentPlayer.hp + 5;
     return this.currentPlayer.weapon;
-  }
+  };
 
   fightChoice(choice){
     if (choice === "weapon") {
@@ -38,18 +39,23 @@ export class Player {
       this.currentPlayer.hp = this.currentPlayer.hp - 10;
       return this.currentPlayer.action;
     }
-  }
+  };
   
   rollDice() {
-    // let random = Math.floor(Math.random() * 6) + 1;
-    let random = 3
-    if (random <= 3) {
-      this.currentPlayer.fightChoice();
-    } else {
+    let random = Math.floor(Math.random() * 6) + 1;
+    this.currentRoll += random;
+  };
+  
+  determineFate() {
+    if (this.currentRoll <= 3) {
+      return false
+    } else if (this.currentRoll >= 4) {
       this.currentPlayer.hp = this.currentPlayer.hp + 20;
       this.currentPlayer.level = this.currentPlayer.level + 2;
+      return true
     }
-  }
-  
+  };
 };
+
+
 

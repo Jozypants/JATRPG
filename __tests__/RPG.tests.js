@@ -36,7 +36,7 @@ describe("Player", () => {
     expect(playerOne.currentPlayer.hp).toEqual(60);
     expect(playerOne.currentPlayer.level).toEqual(1);
   });
-  test("method outputs a random number to decide player fate.", () => {
+  test("method outputs a random number to decide player fate if number is higher than 4.", () => {
     let playerOne = new Player();
     playerOne.chooseCharacter("elVira");
     playerOne.rollDice();
@@ -44,14 +44,15 @@ describe("Player", () => {
     expect(playerOne.currentPlayer.level).toEqual(1);
   });
 
-  test("method outputs a random number to decide player fate.", () => {
+  test("method outputs a random number", () => {
     let playerOne = new Player();
     playerOne.chooseCharacter("elVira");
-    playerOne.rollDice();
-    // expect(random).toBeLessThanOrEqualTo(6);
-    // expect(playerOne.currentPlayer.hp).toEqual(40);
-    // expect(playerOne.currentPlayer.level).toEqual(0);
+    let num = playerOne.rollDice();
+    expect(num).toBeLessThanOrEqual(6);
   });
+
+    // let passFate = playerOne.determineFate(3);
+  // expect().toBe(false);
 });
 
 
