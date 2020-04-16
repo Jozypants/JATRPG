@@ -38,66 +38,17 @@ export class Player {
       this.currentPlayer.hp = this.currentPlayer.hp - 10;
       return this.currentPlayer.action;
     }
-    
   }
-
+  
+  rollDice() {
+    // let random = Math.floor(Math.random() * 6) + 1;
+    let random = 6
+    if (random <= 3) {
+      return this.currentPlayer.fightChoice();
+    } else {
+      this.currentPlayer.hp = this.currentPlayer.hp + 20;
+      this.currentPlayer.level = this.currentPlayer.level + 1;
+    }
+  }
 };
 
-
-// rollDice() {
-//   let random = Math.floor(Math.random() * 6) + 1;
-//   if (random <= 3) {
-//     ;
-    
-
-//   } else if (random >= 4) {
-//     this.
-//   }
-  
-// });
-// export class Game  {
-//   constructor() {
-    // his.character = peeWee, davidBowie, elVira;
-    // this.character = character;
-    // this.currentPlayer = [];
-    // this.currentAction = [];
-    // this.level= 0;
-  // }
-  // methods for game --> 
-// }
-
-
-// tomorrow morning: 
-// - test chooseCharacter method in RPG.tests.js
-// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
-    // this.currentAction = [];
-    // this.level= 0;
-  // }Player.prototype.rollDice = function () {
- 
-  // methods for game --> 
-// }
-
-
-// tomorrow morning: 
-// - test chooseCharacter method in RPG.tests.js
-// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
-    // this.currentAction = [];
-    // this.level= 0;
-  // }
-  // methods for game --> 
-// }
-
-
-// tomorrow morning: 
-// - test chooseCharacter method in RPG.tests.js
-// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
-    // this.currentAction = [];
-    // this.level= 0;
-  // }
-  // methods for game --> 
-// }
-
-
-// tomorrow morning: 
-// - test chooseCharacter method in RPG.tests.js
-// - see if we want to put characters inside of "character options" & push result of chooseCharacter to "selectedCharacter" variable?
