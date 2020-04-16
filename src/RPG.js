@@ -44,7 +44,9 @@ export class Player {
   rollDice() {
     let random = Math.floor(Math.random() * 6) + 1;
     this.currentRoll += random;
-  };
+    return this.currentRoll;
+  }
+  
   
   determineFate() {
     if (this.currentRoll <= 3) {
