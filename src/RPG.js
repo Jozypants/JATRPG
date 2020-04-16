@@ -29,12 +29,20 @@ export class Player {
     this.currentPlayer.hp = this.currentPlayer.hp + 5;
     return this.currentPlayer.weapon;
   }
+
+  fightChoice(choice){
+    if (choice === "weapon") {
+      this.currentPlayer.hp = this.currentPlayer.hp - 5;
+      return this.currentPlayer.weapon;
+    } else if (choice === "action") {
+      this.currentPlayer.hp = this.currentPlayer.hp - 10;
+      return this.currentPlayer.action;
+    }
+    return this.currentPlayer.hp;
+  }
+
 };
 
-// fightChoice(){
-//   if currentPlayer choice = weapon then -= 15 hp
-//   else if currentPlayer choice = action -= 15 hp
-// }
 
 // rollDice() {
 //   let random = Math.floor(Math.random() * 6) + 1;

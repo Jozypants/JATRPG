@@ -21,6 +21,7 @@ describe("Player", () => {
     expect(playerOne.currentPlayer.hp).toEqual(55);
     expect(playerOne.discoverWeapon()).toBe("glitter");
   });
+  
 });
 
 
