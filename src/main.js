@@ -19,7 +19,7 @@ $(document).ready(function () {
   });
   $("#players").submit(function(event) {
     event.preventDefault();
-    // let playerOne = new Player();
+    let playerOne = new Player();
     let userInput = $("#characters").val();
     let character = playerOne.chooseCharacter(userInput);
     

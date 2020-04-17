@@ -19,7 +19,7 @@ plugins: [
   new CleanWebpackPlugin(),
   new Dotenv(),
   new HtmlWebpackPlugin({
-    title: 'Ping Pong',
+    title: 'JATRPG',
     template: './src/index.html',
     inject: 'body'
   })
