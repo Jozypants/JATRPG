@@ -6,3 +6,5 @@ import $ from "jquery";
 
 //User Interface Logic -->
 
+$(document).ready()
+
