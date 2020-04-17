@@ -1,0 +1,40 @@
+.container {
+  padding: 100px;
+
+}
+
+#pee-wee {
+ display: none;
+}
+
+#el-vira {
+  display: none;
+}
+
+#ziggy-stardust {
+  display: none; 
+}
+
+h1  {
+  font-family: 'Black Ops One', cursive;
+  color:silver;
+}
+
+body {
+  font-family: 'Quantico', sans-serif;
+  text-align: center;
+  background: rgb(111,63,251);
+  background: radial-gradient(circle, rgba(111,63,251,1) 0%, rgba(18,0,4,1) 100%);
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  border-radius: 8px;
+}
+
+/* font-family: 'Quantico', sans-serif;
+font-family: 'Black Ops One', cursive; */
